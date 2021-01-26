@@ -4,3 +4,4 @@ node_modules/
 public/
 # cache directory
 .cache/
+.idea/

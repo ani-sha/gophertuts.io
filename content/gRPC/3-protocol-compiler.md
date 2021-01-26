@@ -24,9 +24,9 @@ With `protoc` installed correctly, go to the `enquiry folder` that we had create
 ```shell
 protoc-gen-go --go_out=plugins=grpc:enquiry enquiry.proto
 ```
-This command will create a new "go file" based on the *.proto* definition in `enquiry.proto`, named `enquiry.pb.go`. If you look inside the contents of this file, you'll see certain helper functions and structs which are defined automatically by the protoc compiler adhering to schema we defined in our *.proto* file. The main functions to notice is there are getters for each field we defined in our message, also there will be a function that registers the service to our gRPC server. 
+This command will create a new "go file" based on the *.proto* definition in `enquiry.proto`, named `enquiry.pb.go`. If you look inside the contents of this file, you'll see certain helper functions and structures which are defined automatically by the protoc compiler adhering to schema we defined in our *.proto* file. The main functions to notice is there are getters for each field we defined in our message, also there will be a function that registers the service to our gRPC server. 
 
-This feature is an advantage of protocol buffers since it reduces the overhead of writing extra boilerplate code. You may have thousands of fields and if you were to add one more, you'd just change the schema, not all of the underlying implementations of it. (for example, parsing when receiving response from the server).
+This feature is an advantage of protocol buffers since it reduces the overhead of writing extra boilerplate code. You may have thousands of fields and if you were to add one more, you'd just change the schema, not all the underlying implementations of it. (for example, parsing when receiving response from the server).
 
 # Result
 
